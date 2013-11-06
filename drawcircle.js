@@ -4,7 +4,7 @@ var currentColor = 'black';
 var lineRadius = 75;
 var lineWidth = 15;
 
-setInterval(draw, 50);
+window.requestAnimationFrame(draw);
 
 
 function draw() { 
@@ -41,5 +41,6 @@ function draw() {
     // line color
     context.strokeStyle = currentColor;
     context.stroke();
+    window.requestAnimationFrame(draw);
 
 }
