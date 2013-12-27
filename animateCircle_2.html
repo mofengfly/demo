@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+
+
+        div#spinner {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 35%;
+            left: 50%;
+            margin-left: -40px;
+            background: blue;
+            /* circle radius gradient shadow goes here... */
+        }
+
+        div#logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            z-index: 3;
+        }
+
+        #logo img {
+            width: 100%;
+            height:100%;
+        }
+
+        div#gear {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition: -webkit-transform 0.1s;
+            transition: transform 0.1s;
+        rotate(45deg);
+            pointer-events: none;
+            z-index: 2;
+        }
+        #gear img{
+            display:block;
+        }
+        .spin {
+            -webkit-animation: rotation 4.5s linear infinite;
+            animation: rotation 4.5s linear infinite;
+
+        }
+
+        #header {
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        #container {
+            position: relative;
+            height: 200px;
+            text-align: center;
+            color: #666;
+        }
+
+        #container p {
+            margin: 20px auto;
+            width: 80%;
+            color:#333;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #333;
+            background: #6cf;
+        }
+
+        @-webkit-keyframes rotation {
+            0% 		{ -webkit-transform: rotate(0deg); }
+            50% 	{ -webkit-transform: rotate(180deg); }
+            100% 	{ -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes rotation {
+            0% 		{ transform: rotate(0deg); }
+            50% 	{ transform: rotate(180deg); }
+            100% 	{ transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+<div id="spinner">
+    <div id="logo">
+        <img src="http://leongaban.com/_codepen/whoat/loader-logo.png"/>
+    </div>
+    <div id="gear" class="spin">
+        <img src="http://leongaban.com/_codepen/whoat/loader-gear.png"/>
+    </div>
+</div>
+
+</body>
+</html>
